@@ -1,0 +1,61 @@
+﻿@model Destek.Entities.Message
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="container">
+        <div class="col-lg-10">
+            <img src="~/images/@Model.PostImageFilename" class="img-profile rounded-bottom" width="900" height="500" />
+            @Html.HiddenFor(model => model.PostImageFilename)
+            <br /><br />
+        </div>
+        <div class="col-12">
+            <h4 class="text-center">@ViewBag.Title</h4>
+            <hr />
+            <dl class="col-10 text-lg">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Brans.Title)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Brans.Title)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Text)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Text)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.IsActive)
+                </dd>
+            </dl>
+            <br />
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>
+                        <a href="/Cagri/Edit/@Model.Id" class="btn btn-warning" title="Düzenle">
+                            <span class="fa fa-edit"> Düzenle</span>
+                        </a>
+                        <a href="/Cagri/Index" class="btn btn-default">
+                            <span class="fa fa-arrow-circle-left"> Geri Dön</span>
+                        </a>
+                        <a href="/Cagri/CagriEkle" class="btn btn-primary">
+                            <span class="fa fa-reply"> Cevapla </span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

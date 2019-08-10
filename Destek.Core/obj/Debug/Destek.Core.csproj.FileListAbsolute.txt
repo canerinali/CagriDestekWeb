@@ -1,0 +1,12 @@
+C:\Users\inali\source\repos\Destek_Project.WebApp.Soution\Destek.Core\obj\Debug\Destek.Core.csprojAssemblyReference.cache
+C:\Users\inali\source\repos\Destek_Project.WebApp.Soution\Destek.Core\obj\Debug\Destek.Core.csproj.CoreCompileInputs.cache
+C:\Users\inali\source\repos\Destek_Project.WebApp.Soution\Destek.Core\bin\Debug\Destek.Core.dll
+C:\Users\inali\source\repos\Destek_Project.WebApp.Soution\Destek.Core\bin\Debug\Destek.Core.pdb
+C:\Users\inali\source\repos\Destek_Project.WebApp.Soution\Destek.Core\obj\Debug\Destek.Core.dll
+C:\Users\inali\source\repos\Destek_Project.WebApp.Soution\Destek.Core\obj\Debug\Destek.Core.pdb
+C:\Users\inali\OneDrive\Masaüstü\Destek_Project.WebApp.Soution\Destek.Core\bin\Debug\Destek.Core.dll
+C:\Users\inali\OneDrive\Masaüstü\Destek_Project.WebApp.Soution\Destek.Core\bin\Debug\Destek.Core.pdb
+C:\Users\inali\OneDrive\Masaüstü\Destek_Project.WebApp.Soution\Destek.Core\obj\Debug\Destek.Core.csprojAssemblyReference.cache
+C:\Users\inali\OneDrive\Masaüstü\Destek_Project.WebApp.Soution\Destek.Core\obj\Debug\Destek.Core.csproj.CoreCompileInputs.cache
+C:\Users\inali\OneDrive\Masaüstü\Destek_Project.WebApp.Soution\Destek.Core\obj\Debug\Destek.Core.dll
+C:\Users\inali\OneDrive\Masaüstü\Destek_Project.WebApp.Soution\Destek.Core\obj\Debug\Destek.Core.pdb

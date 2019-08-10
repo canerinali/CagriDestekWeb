@@ -1,0 +1,91 @@
+﻿@using Destek.Entities
+@using Destek_Project.WebApp.Models
+@{
+    DestekUser user = CurrentSession.User;
+    ViewBag.Title = "Index";
+
+}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <a href="/Cagri/CagriEkle">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-lg font-weight-bold text-primary text-uppercase mb-1">Çağrı Oluştur</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-pen fa-3x text-gray-300"></i>
+                                <i class="fas fa-plus fa-1x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        @if (user.IsAdmin == true)
+        {
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <a href="/Departman/Create">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-lg font-weight-bold text-success text-uppercase mb-1">Departman<br /> Ekle</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-fw fa-list fa-3x text-gray-300"></i>
+                                    <i class="fas fa-plus fa-1x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <a href="/User/Create">
+                    <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-lg font-weight-bold text-info text-uppercase mb-1">KULLANICI <br /> EKLE </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-clipboard-list fa-3x text-gray-300"></i>
+                                    <i class="fas fa-plus fa-1x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <a href="/Cagri/Index">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-lg font-weight-bold text-warning text-uppercase mb-1">Çağrılar</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-comments fa-3x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->

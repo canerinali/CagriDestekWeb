@@ -1,0 +1,73 @@
+﻿@using Destek_Project.WebApp
+@model IEnumerable<Destek.Entities.Brans>
+@{
+    ViewBag.Title = "Departmanlar";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h2 class="text-center">@ViewBag.Title</h2>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-11 col-md-offset-1">
+            <p>
+                <a href="/Departman/Create" class="btn btn-primary">
+                    <span class="fa fa-edit"> Yeni</span>
+                </a>
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreatedOn)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ModifiedOn)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ModifiedName)
+                    </th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedOn)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModifiedOn)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModifiedName)
+                        </td>
+                        <td>
+                            <a href="/Departman/Edit/@item.Id" class="btn btn-xs" title="Düzenle">
+                                <span class="fa fa-edit"></span>
+                            </a>
+                            <a href="/Departman/Details/@item.Id" class="btn btn-xs" title="Detaylar">
+                                <span class="fa fa-search"></span>
+                            </a>
+                            <a href="/Departman/Delete/@item.Id" class="btn btn-xs" title="Kaldır">
+                                <span class="fa fa-trash"></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

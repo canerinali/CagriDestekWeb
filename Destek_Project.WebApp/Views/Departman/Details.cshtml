@@ -1,0 +1,60 @@
+﻿@using Destek_Project.WebApp
+@model Destek.Entities.Brans
+@{
+    ViewBag.Title = "Kategori Detay";
+}
+
+<div class="row">
+    <div class="container">
+        <div class="col-12">
+            <h4 class="text-center">@ViewBag.Title</h4>
+            <hr />
+            <dl class="col-10 text-lg">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedOn)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedOn)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedName)
+                </dd>
+            </dl>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>
+                    <a href="/Departman/Edit/@Model.Id" class="btn btn-warning" title="Düzenle">
+                        <span class="fa fa-edit"> Düzenle</span>
+                    </a>
+                    <a href="/Departman/Index" class="btn btn-default">
+                        <span class="fa fa-arrow-circle-left"> Geri Dön</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+

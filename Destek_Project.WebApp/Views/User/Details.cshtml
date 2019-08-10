@@ -1,0 +1,86 @@
+﻿@using Destek_Project.WebApp
+@model Destek.Entities.DestekUser
+@{
+    ViewBag.Title = "Kullanıcı Detay";
+}
+<div class="row">
+    <div class="container">
+        <div class="col-lg-10">
+            <img src="~/images/@Model.ProfileImageFilename" class="img-profile rounded-bottom" width="900" height="500" />
+            @Html.HiddenFor(model => model.ProfileImageFilename)
+            <br /><br />
+        </div>
+        <div class="col-12">
+            <h4 class="text-center">@ViewBag.Title</h4>
+            <hr />
+            <dl class="col-10 text-lg">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Surname)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Surname)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Username)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Username)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Password)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Password)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.IsActive)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedOn)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedOn)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedName)
+                </dd>
+            </dl>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>
+                        <a href="/User/Edit/@Model.Id" class="btn btn-warning" title="Düzenle">
+                            <span class="fa fa-edit"> Düzenle</span>
+                        </a>
+                        <a href="/User/Index" class="btn btn-default">
+                            <span class="fa fa-arrow-circle-left"> Geri Dön</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+﻿@using Destek_Project.WebApp
+@model Destek.Entities.DestekUser
+@{
+    ViewBag.Title = "Kullanıcı Sil";
+}
+<div class="row">
+    <div class="container">
+        <div class="col-12">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>@ViewBag.Title</h2>
+                <h3>Silmek istediğinize emin misiniz?</h3>
+            </div>
+            <hr />
+            <dl class="col-10 text-lg">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Surname)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Surname)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Username)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Username)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Password)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Password)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.IsActive)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedOn)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedOn)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedName)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedName)
+                </dd>
+            </dl>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="form-actions no-color">
+                            <div class="col-md-offset-2 col-md-10">
+                                <button type="submit" class="btn btn-danger">
+                                    <span class="fa fa-save"></span> Sil
+                                </button>
+                                <a href="/User/Index" class="btn btn-default">
+                                    <span class="fa fa-arrow-circle-left"></span>Back to List
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

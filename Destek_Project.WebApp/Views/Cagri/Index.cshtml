@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Destek.Entities.Message>
+@using Destek.Entities
+@using Destek_Project.WebApp.Models
+@{
+    DestekUser user = CurrentSession.User;
+    ViewBag.Title = "Çağrılar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-md-offset-1">
+            <h2 class="text-center">@ViewBag.Title</h2>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-md-offset-1">
+            <p>
+                <a href="/Cagri/CagriEkle" class="btn btn-primary">
+                    <span class="fa fa-edit"> Yeni</span>
+                </a>
+            </p>
+            <div class="left_bar">
+                <ul class=" nav-tabs--vertical nav" role="navigation">
+                    <li class="nav-item">
+                        <a href="/Cagri/Aktif" class="nav-link active" aria-controls="lorem">Aktif Çağrılar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Cagri/Pasif" class="nav-link active" aria-controls="ipsum">Pasif Çağrılar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Cagri/Index" class="nav-link active"  aria-controls="dolor">Tüm Çağrılar</a>
+                    </li>
+                </ul>
+            </div>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Brans.Title)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Owner.Username)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MesajDurum)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Brans.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Owner.Username)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MesajDurum)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td width="250">
+                            <a href="/Cagri/Edit/@item.Id" class="btn btn-lg" title="Düzenle">
+                                <span class="fa fa-edit"></span>
+                            </a>
+                            <a href="/Cagri/Details/@item.Id" class="btn btn-lg" title="Cevapla">
+                                <span class="fa fa-reply"></span>
+                            </a>
+                            @if (user.IsAdmin == true)
+                            {
+                                <a href="/Cagri/Delete/@item.Id" class="btn btn-lg" title="Kaldır">
+                                    <span class="fa fa-trash"></span>
+                                </a>
+                            }
+
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
